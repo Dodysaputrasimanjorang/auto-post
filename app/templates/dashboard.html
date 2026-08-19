@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="panel token-panel">
+  <div class="token-header">
+    <div>
+      <h2>Token Discord</h2>
+      <p class="muted">Tempel token Discord Anda di sini untuk mengganti token tanpa mengedit file.</p>
+    </div>
+    <span class="pill {{ 'online' if has_token else 'offline' }}">
+      {{ 'Token tersimpan' if has_token else 'Token belum diisi' }}
+    </span>
+  </div>
+  <form method="post" action="/account/token" class="token-form">
+    <input
+      type="password"
+      name="discord_token"
+      placeholder="Tempel token Discord Anda di sini..."
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button type="submit">Simpan Token</button>
+  </form>
+</section>
+
+<header class="hero">
+  <div>
+    <p class="eyebrow">Local-only dashboard</p>
+    <h1>Auto Discord Poster</h1>
+    <p class="muted">Kelola akun Discord pribadi, channel, dan jadwal auto post tanpa login.</p>
+  </div>
+  <div class="status-card">
+    <span class="status-label">Akun Discord</span>
+    <strong class="status-value {{ 'online' if bot_ready else 'offline' }}">
+      {{ 'Online' if bot_ready else 'Offline' }}
+    </strong>
+    <div class="actions">
+      <form method="post" action="/account/start"><button type="submit">Start Account</button></form>
+      <form method="post" action="/account/stop"><button type="submit" class="secondary">Stop Account</button></form>
+    </div>
+  </div>
+</header>
+
+<section class="grid two">
+  <article class="panel">
+    <h2>Buat Automation</h2>
+    <form method="post" action="/automations" class="form-grid">
+      <label>
+        Nama
+        <input name="name" placeholder="Promo Harian" required />
+      </label>
+      <label>
+        Server
+        <select id="guild_id" name="guild_id" required>
+          <option value="">Pilih server</option>
+          {% for guild in guilds %}
+            <option value="{{ guild.id }}">{{ guild.name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        Channel
+        <select id="channel_id" name="channel_target" required>
+          <option value="">Pilih channel</option>
+          {% for guild in guilds %}
+            {% for channel in guild.channels %}
+              <option value="{{ guild.id }}|{{ channel.id }}">#{{ channel.name }} ({{ guild.name }})</option>
+            {% endfor %}
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        Interval menit
+        <input type="number" name="interval_minutes" min="1" value="60" required />
+      </label>
+      <label class="full">
+        Pesan
+        <textarea name="message" rows="5" placeholder="Tulis isi pesan..." required></textarea>
+      </label>
+      <div class="full">
+        <button type="submit">Simpan automation</button>
+      </div>
+    </form>
+  </article>
+
+  <article class="panel">
+    <h2>Server & Channel</h2>
+    {% if guilds %}
+      <div class="guild-list">
+        {% for guild in guilds %}
+          <details {% if loop.first %}open{% endif %}>
+            <summary>{{ guild.name }}</summary>
+            <ul>
+              {% for channel in guild.channels %}
+                <li>#{{ channel.name }} <span class="muted">{{ channel.id }}</span></li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="muted">Hubungkan akun Discord untuk memuat server dan channel.</p>
+    {% endif %}
+  </article>
+</section>
+
+<section class="panel">
+  <h2>Automation Aktif</h2>
+  {% if automations %}
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Status</th>
+            <th>Server</th>
+            <th>Channel</th>
+            <th>Interval</th>
+            <th>Last Sent</th>
+            <th>Next Run</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for automation in automations %}
+            <tr>
+              <td>{{ automation.name }}</td>
+              <td>
+                <span class="pill {{ 'online' if automation.enabled else 'offline' }}">
+                  {{ 'Aktif' if automation.enabled else 'Nonaktif' }}
+                </span>
+              </td>
+              <td>{{ guild_lookup.get(automation.guild_id).name if guild_lookup.get(automation.guild_id) else automation.guild_id }}</td>
+              <td>{{ automation.channel_id }}</td>
+              <td>{{ automation.interval_minutes }} menit</td>
+              <td>{{ automation.last_sent_at or '-' }}</td>
+              <td>{{ automation.next_run_at or '-' }}</td>
+              <td class="row-actions">
+                <form method="post" action="/automations/{{ automation.id }}/toggle">
+                  <button type="submit" class="secondary">Toggle</button>
+                </form>
+                <form method="post" action="/automations/{{ automation.id }}/delete" onsubmit="return confirm('Hapus automation ini?');">
+                  <button type="submit" class="danger">Hapus</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="muted">Belum ada automation dibuat.</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <div class="activity-header">
+    <h2>Activity Logs</h2>
+    <form method="post" action="/api/activity/clear" onsubmit="return confirm('Bersihkan semua activity log?');">
+      <button type="submit" class="secondary">Bersihkan</button>
+    </form>
+  </div>
+  {% if activity_logs %}
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Waktu</th>
+            <th>Aksi</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for log in activity_logs %}
+            <tr>
+              <td>{{ log.timestamp }}</td>
+              <td>
+                <span class="pill {{ 'offline' if log.level == 'error' else 'online' if log.level == 'info' else '' }}">
+                  {{ log.action }}
+                </span>
+              </td>
+              <td>{{ log.detail }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="muted">Belum ada aktivitas tercatat.</p>
+  {% endif %}
+</section>
+
+{% endblock %}

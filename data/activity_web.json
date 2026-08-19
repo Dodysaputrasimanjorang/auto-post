@@ -1,0 +1,710 @@
+[
+  {
+    "timestamp": "2026-08-19T18:40:31.362580+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-08-19T18:37:50.276647+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-19T18:37:47.215272+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-19T18:37:45.139059+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-19T18:37:38.514843+07:00",
+    "action": "account_login",
+    "level": "info",
+    "detail": "Login sebagai exfu7151"
+  },
+  {
+    "timestamp": "2026-08-19T18:37:35.386650+07:00",
+    "action": "account_start_error",
+    "level": "error",
+    "detail": "Gagal menjalankan akun: Akun Discord gagal login"
+  },
+  {
+    "timestamp": "2026-08-19T18:34:56.268785+07:00",
+    "action": "server_start",
+    "level": "info",
+    "detail": "Server dimulai"
+  },
+  {
+    "timestamp": "2026-08-19T18:34:50.444112+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-08-19T18:34:49.839127+07:00",
+    "action": "server_start",
+    "level": "info",
+    "detail": "Server dimulai"
+  },
+  {
+    "timestamp": "2026-08-18T18:44:54.242384+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-08-18T18:26:07.872409+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T18:26:07.842377+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T17:25:35.918868+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T17:25:35.906854+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T17:07:36.514743+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T17:07:36.464762+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T16:57:24.611142+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'doors' dibuat"
+  },
+  {
+    "timestamp": "2026-08-18T16:56:42.214224+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'doors' dihapus"
+  },
+  {
+    "timestamp": "2026-08-18T16:34:55.766362+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T16:34:55.726230+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-18T16:21:09.354294+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T16:21:09.270122+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T15:20:36.832817+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T15:20:36.761771+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T15:02:27.296680+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T15:02:27.240515+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T14:16:09.008704+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T14:16:08.922179+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T14:04:55.682954+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T14:04:55.639032+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-18T13:15:36.768408+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T13:15:36.683920+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T12:57:26.670871+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T12:57:26.630691+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T12:11:08.071882+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T12:11:08.015229+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T11:34:54.999444+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T11:34:54.961961+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-18T11:10:38.134634+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T11:10:38.087632+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T10:52:26.535169+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T10:52:26.454839+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T10:08:11.704165+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'doors' dihapus"
+  },
+  {
+    "timestamp": "2026-08-18T10:06:08.505253+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T10:06:08.447394+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T09:44:06.734487+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'doors' gagal: Gagal kirim pesan: 429 - {\"message\":\"This action cannot be performed due to slowmode rate limit\",\"code\":20016,\"retry_after\":4820.431,\"global\":false}\n"
+  },
+  {
+    "timestamp": "2026-08-18T09:05:02.512246+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'background' dibuat"
+  },
+  {
+    "timestamp": "2026-08-18T09:04:47.058601+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'doors' dibuat"
+  },
+  {
+    "timestamp": "2026-08-18T09:03:48.851675+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'background' dihapus"
+  },
+  {
+    "timestamp": "2026-08-18T09:03:48.241388+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T09:03:48.146415+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T08:47:25.914644+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T08:47:25.896490+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T08:01:08.191828+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T08:01:08.068093+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T04:53:48.388821+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T04:53:48.327776+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T04:37:26.499040+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T04:37:26.402003+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T03:51:08.207855+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T03:51:08.153614+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T03:29:02.562732+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T03:29:02.537972+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-18T02:48:48.133627+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T02:48:48.104628+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T02:32:26.336744+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T02:32:26.296034+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-18T01:46:08.592268+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T01:46:08.551980+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-18T01:24:03.094925+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T01:24:03.053030+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-18T00:43:49.402414+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T00:43:49.376519+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-18T00:27:26.333223+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-18T00:27:26.320646+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-17T23:41:07.992170+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T23:41:07.943948+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-17T23:19:02.721467+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T23:19:02.675475+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-17T22:38:48.071541+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T22:38:48.036411+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-08-17T22:21:39.444660+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'platform' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T22:21:18.688112+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'platform' dihapus"
+  },
+  {
+    "timestamp": "2026-08-17T22:05:03.256018+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T22:05:03.213914+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-08-17T21:35:35.559199+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'sign' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T21:35:22.836018+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'sign' dihapus"
+  },
+  {
+    "timestamp": "2026-08-17T21:34:19.304395+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T21:34:19.251159+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-08-17T21:13:41.034465+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'doors' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T21:13:26.788375+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'doors' dihapus"
+  },
+  {
+    "timestamp": "2026-08-17T21:03:58.624251+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T21:03:58.541164+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-08-17T20:34:20.626351+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'platform' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:34:04.784875+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'sign' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:33:50.559805+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'doors' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:33:32.192967+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'background' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:32:54.370508+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-17T20:32:52.790117+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-17T20:32:51.893099+07:00",
+    "action": "account_login",
+    "level": "info",
+    "detail": "Login sebagai exfu7151"
+  },
+  {
+    "timestamp": "2026-08-17T20:32:49.192997+07:00",
+    "action": "token_updated",
+    "level": "info",
+    "detail": "Token Discord diperbarui"
+  },
+  {
+    "timestamp": "2026-08-17T20:31:56.791410+07:00",
+    "action": "account_start_error",
+    "level": "error",
+    "detail": "Gagal menjalankan akun: Akun Discord gagal login"
+  },
+  {
+    "timestamp": "2026-08-17T20:31:52.439320+07:00",
+    "action": "account_start_error",
+    "level": "error",
+    "detail": "Gagal menjalankan akun: Akun Discord gagal login"
+  },
+  {
+    "timestamp": "2026-08-17T20:31:49.136463+07:00",
+    "action": "account_start_error",
+    "level": "error",
+    "detail": "Gagal menjalankan akun: Akun Discord gagal login"
+  },
+  {
+    "timestamp": "2026-08-17T20:31:04.493771+07:00",
+    "action": "server_start",
+    "level": "info",
+    "detail": "Server dimulai"
+  },
+  {
+    "timestamp": "2026-08-17T20:30:36.524356+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-08-17T20:27:40.063783+07:00",
+    "action": "automation_deleted",
+    "level": "info",
+    "detail": "Automation 'sign' dihapus"
+  },
+  {
+    "timestamp": "2026-08-17T20:27:05.557459+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim"
+  },
+  {
+    "timestamp": "2026-08-17T20:27:05.491457+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 1538900863303819357"
+  },
+  {
+    "timestamp": "2026-08-17T20:26:41.506895+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'platform' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:26:19.052046+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'sign' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:25:52.920082+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'doors' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:25:28.967639+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'background' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:24:53.447650+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'sign' dibuat"
+  },
+  {
+    "timestamp": "2026-08-17T20:24:22.597337+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-17T20:24:19.978282+07:00",
+    "action": "account_start",
+    "level": "info",
+    "detail": "Akun Discord dijalankan"
+  },
+  {
+    "timestamp": "2026-08-17T20:24:19.375008+07:00",
+    "action": "account_login",
+    "level": "info",
+    "detail": "Login sebagai exfu7151"
+  },
+  {
+    "timestamp": "2026-08-17T20:24:02.832973+07:00",
+    "action": "activity_cleared",
+    "level": "info",
+    "detail": "Activity log dibersihkan"
+  }
+]

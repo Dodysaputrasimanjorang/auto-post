@@ -1,0 +1,5 @@
+2026-08-19 18:34:56,294 | INFO | __main__ | ==================================================
+2026-08-19 18:34:56,296 | INFO | __main__ | Dashboard tersedia di: http://127.0.0.1:5000
+2026-08-19 18:34:56,296 | INFO | __main__ | ==================================================
+2026-08-19 18:37:38,503 | INFO | app.discord_service | Akun Discord login sebagai exfu7151
+2026-08-19 18:40:31,361 | INFO | app.discord_service | Akun Discord dihentikan
