@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
-from .discord_service import DiscordService
+from .discord_service import DiscordManager
 from .models import Automation, add_jitter
 from .storage import JsonStore
 
@@ -17,9 +17,9 @@ LOCAL_TZ = timezone(timedelta(hours=7))
 
 
 class SchedulerService:
-    def __init__(self, store: JsonStore, bot_service: DiscordService, activity_logger=None) -> None:
+    def __init__(self, store: JsonStore, bot_manager: DiscordManager, activity_logger=None) -> None:
         self.store = store
-        self.bot_service = bot_service
+        self.bot_manager = bot_manager
         self.activity_logger = activity_logger
         self.scheduler = BackgroundScheduler(timezone="Asia/Jakarta")
         # Lock untuk mencegah pengiriman ganda pada automation yang sama
@@ -100,12 +100,23 @@ class SchedulerService:
             automation = self.store.get_automation(automation_id)
             if not automation or not automation.enabled:
                 return
-            self.bot_service.send_message(automation.guild_id, automation.channel_id, automation.message)
+
+            account_service = self.bot_manager.get(automation.account_id)
+            if account_service is None:
+                raise RuntimeError(f"Account '{automation.account_id}' tidak ditemukan")
+            if not account_service.token:
+                raise RuntimeError(f"Token untuk account '{account_service.account_name}' belum diisi")
+
+            account_service.send_message(automation.guild_id, automation.channel_id, automation.message)
             automation.touch_sent()
             self.store.upsert_automation(automation)
-            logger.info("Automation terkirim: %s", automation.name)
+            logger.info("Automation terkirim: %s (via %s)", automation.name, account_service.account_name)
             if self.activity_logger:
-                self.activity_logger.log("automation_sent", "info", f"Automation '{automation.name}' terkirim")
+                self.activity_logger.log(
+                    "automation_sent",
+                    "info",
+                    f"Automation '{automation.name}' terkirim via {account_service.account_name}",
+                )
         except Exception as exc:
             logger.error("Gagal mengirim automation %s: %s", automation.name, exc)
             if self.activity_logger:

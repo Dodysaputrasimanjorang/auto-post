@@ -44,6 +44,7 @@ class Automation:
     channel_id: str
     message: str
     interval_minutes: int
+    account_id: str = "account1"
     enabled: bool = True
     created_at: str = ""
     last_sent_at: str | None = None
@@ -57,6 +58,7 @@ class Automation:
         channel_id: str,
         message: str,
         interval_minutes: int,
+        account_id: str = "account1",
     ) -> "Automation":
         created_at = now_utc()
         next_run = add_jitter(created_at + timedelta(minutes=interval_minutes), interval_minutes)
@@ -67,6 +69,7 @@ class Automation:
             channel_id=channel_id,
             message=message,
             interval_minutes=interval_minutes,
+            account_id=account_id,
             enabled=True,
             created_at=isoformat(created_at) or "",
             last_sent_at=None,
@@ -82,6 +85,7 @@ class Automation:
             channel_id=data["channel_id"],
             message=data["message"],
             interval_minutes=int(data["interval_minutes"]),
+            account_id=data.get("account_id", "account1"),
             enabled=bool(data.get("enabled", True)),
             created_at=data.get("created_at", ""),
             last_sent_at=data.get("last_sent_at"),

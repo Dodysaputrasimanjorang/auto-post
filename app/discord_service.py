@@ -18,6 +18,12 @@ CHANNELS_CACHE_TTL = 600
 KEEP_ALIVE_INTERVAL = 900
 # Delay antar request fetch channel (detik)
 CHANNEL_FETCH_DELAY = 1.5
+# Timeout fetch channel (detik) - server besar butuh waktu lebih lama
+CHANNEL_FETCH_TIMEOUT = 20
+# Jumlah percobaan fetch channel bila gagal (network/429)
+CHANNEL_FETCH_RETRIES = 3
+# Jeda antar percobaan fetch channel yang gagal (detik)
+CHANNEL_FETCH_RETRY_DELAY = 2.0
 
 
 @dataclass
@@ -38,8 +44,10 @@ class GuildSnapshot:
 class DiscordService:
     """User Account Service untuk Discord automation menggunakan HTTP API."""
 
-    def __init__(self, token: str, activity_logger=None) -> None:
+    def __init__(self, token: str, activity_logger=None, account_id: str = "account1", account_name: str = "Akun 1") -> None:
         self.token = token
+        self.account_id = account_id
+        self.account_name = account_name
         self.activity_logger = activity_logger
         self.user_id: str | None = None
         self.user_name: str | None = None
@@ -126,37 +134,55 @@ class DiscordService:
         self._log_activity("account_stop", "info", "Akun Discord dihentikan")
 
     def _fetch_guilds(self) -> None:
-        """Fetch dan cache guild list. Hanya fetch ulang jika cache sudah TTL."""
+        """Fetch dan cache guild list dengan pagination. Hanya fetch ulang jika cache sudah TTL."""
         now = time.time()
         # Jika cache masih fresh (< 5 menit), jangan fetch ulang
         if self._guilds_cache and (now - self._guilds_last_fetch) < 300:
             return
 
+        all_guilds: dict[str, Any] = {}
+        after: str | None = None
         try:
-            resp = requests.get(
-                f"{DISCORD_API_BASE}/users/@me/guilds",
-                headers=self._headers,
-                timeout=10,
-            )
-            if resp.status_code == 200:
-                self._guilds_cache = {guild["id"]: guild for guild in resp.json()}
-                self._guilds_last_fetch = now
-                self._consecutive_errors = 0
-            elif resp.status_code == 401:
-                self._consecutive_errors += 1
-                logger.warning("Token ditolak (error ke-%d)", self._consecutive_errors)
-                if self._consecutive_errors >= 3:
-                    logger.error("Token ditolak berulang kali. Service dihentikan.")
-                    self._running = False
-                    self._log_activity("token_rejected", "error", "Token ditolak berulang kali")
-            elif resp.status_code == 429:
-                logger.warning("Discord rate limited, akan coba lagi nanti")
-                self._consecutive_errors += 1
-            else:
-                # Jangan log berlebihan untuk error yang sama
-                self._consecutive_errors += 1
-                if self._consecutive_errors <= 3:
-                    logger.warning("Fetch guilds gagal: %s", resp.status_code)
+            while True:
+                params: dict[str, Any] = {"limit": 200}
+                if after:
+                    params["after"] = after
+                resp = requests.get(
+                    f"{DISCORD_API_BASE}/users/@me/guilds",
+                    headers=self._headers,
+                    params=params,
+                    timeout=10,
+                )
+                if resp.status_code == 200:
+                    batch = resp.json()
+                    for guild in batch:
+                        all_guilds[guild["id"]] = guild
+                    if len(batch) < 200:
+                        break
+                    after = batch[-1]["id"]
+                elif resp.status_code == 401:
+                    self._consecutive_errors += 1
+                    logger.warning("Token ditolak (error ke-%d)", self._consecutive_errors)
+                    if self._consecutive_errors >= 3:
+                        logger.error("Token ditolak berulang kali. Service dihentikan.")
+                        self._running = False
+                        self._log_activity("token_rejected", "error", "Token ditolak berulang kali")
+                    return
+                elif resp.status_code == 429:
+                    logger.warning("Discord rate limited saat fetch guilds, menunggu lalu coba lagi")
+                    self._consecutive_errors += 1
+                    retry_after = float(resp.headers.get("Retry-After", 0) or 0)
+                    time.sleep(min(retry_after, 10) or 1.0)
+                else:
+                    # Jangan log berlebihan untuk error yang sama
+                    self._consecutive_errors += 1
+                    if self._consecutive_errors <= 3:
+                        logger.warning("Fetch guilds gagal: %s", resp.status_code)
+                    return
+
+            self._guilds_cache = all_guilds
+            self._guilds_last_fetch = now
+            self._consecutive_errors = 0
         except requests.Timeout:
             self._consecutive_errors += 1
             if self._consecutive_errors <= 3:
@@ -184,47 +210,61 @@ class DiscordService:
         return guilds
 
     def _get_cached_channels(self, guild_id: str, guild_data: dict[str, Any], now: float) -> list[ChannelSnapshot]:
-        """Return cached channels jika masih fresh, sebaliknya fetch ulang."""
+        """Return cached channels jika masih fresh, sebaliknya fetch ulang (dengan retry)."""
         cached = self._channels_cache.get(guild_id)
         if cached and (now - cached[0]) < CHANNELS_CACHE_TTL:
             return cached[1]
 
-        try:
-            resp = requests.get(
-                f"{DISCORD_API_BASE}/guilds/{guild_id}/channels",
-                headers=self._headers,
-                timeout=10,
-            )
-            if resp.status_code != 200:
-                # Log warning gabungan per guild, tidak berulang-ulang
-                if now - self._last_channel_fetch_warning > 60:
-                    logger.warning("Tidak dapat memuat channel untuk beberapa server")
-                    self._last_channel_fetch_warning = now
-                # Jika gagal, coba pakai cache lama jika ada, atau kosongkan
-                return cached[1] if cached else []
+        guild_name = guild_data.get("name", guild_id)
+        channels: list[ChannelSnapshot] | None = None
+        last_error: Any = None
 
-            channels: list[ChannelSnapshot] = []
-            for ch in resp.json():
-                if ch.get("type") == 0:  # 0 = text channel
-                    channels.append(
+        for attempt in range(1, CHANNEL_FETCH_RETRIES + 1):
+            try:
+                resp = requests.get(
+                    f"{DISCORD_API_BASE}/guilds/{guild_id}/channels",
+                    headers=self._headers,
+                    timeout=CHANNEL_FETCH_TIMEOUT,
+                )
+                if resp.status_code == 200:
+                    channels = [
                         ChannelSnapshot(
                             id=ch["id"],
                             name=ch["name"],
                             guild_id=guild_id,
-                            guild_name=guild_data["name"],
+                            guild_name=guild_name,
                         )
-                    )
+                        for ch in resp.json()
+                        if ch.get("type") == 0  # 0 = text channel
+                    ]
+                    break
+                if resp.status_code == 429:
+                    last_error = f"rate limited (429)"
+                    retry_after = float(resp.headers.get("Retry-After", 0) or 0)
+                    logger.warning("Rate limited saat fetch channel guild '%s', menunggu %.1fs", guild_name, retry_after)
+                    time.sleep(min(retry_after, 10) or 1.0)
+                    continue
+                last_error = f"HTTP {resp.status_code}"
+            except requests.RequestException as exc:
+                last_error = f"{type(exc).__name__}: {str(exc)[:120]}"
 
+            if attempt < CHANNEL_FETCH_RETRIES:
+                time.sleep(CHANNEL_FETCH_RETRY_DELAY)
+
+        if channels is not None:
             self._channels_cache[guild_id] = (now, channels)
             # Delay kecil antar request untuk menghormati rate limit
             time.sleep(CHANNEL_FETCH_DELAY)
             return channels
 
-        except Exception as exc:
-            if now - self._last_channel_fetch_warning > 60:
-                logger.warning("Gagal memuat channel: %s", exc)
-                self._last_channel_fetch_warning = now
-            return cached[1] if cached else []
+        # Semua percobaan gagal: log jelas per guild, lalu pakai cache lama bila ada
+        if now - self._last_channel_fetch_warning > 60:
+            logger.warning("Gagal memuat channel guild '%s' (%s) setelah %d percobaan: %s",
+                           guild_name, guild_id, CHANNEL_FETCH_RETRIES, last_error)
+            self._log_activity("channel_fetch_error", "error",
+                               f"Gagal memuat channel '{guild_name}': {last_error}")
+            self._last_channel_fetch_warning = now
+        return cached[1] if cached else []
 
     def send_message(self, guild_id: str, channel_id: str, message: str) -> None:
         """Send message ke channel."""
@@ -247,3 +287,69 @@ class DiscordService:
             self._log_activity("message_sent", "info", f"Pesan terkirim ke channel {channel_id}")
         except requests.RequestException as exc:
             raise RuntimeError(f"Gagal kirim pesan: {exc}")
+
+
+@dataclass
+class AccountSpec:
+    """Spesifikasi satu account Discord (id, nama, token)."""
+    id: str
+    name: str
+    token: str
+
+
+class DiscordManager:
+    """Kelola 2+ akun Discord, masing-masing dengan token dan koneksi sendiri."""
+
+    def __init__(self, accounts: list[AccountSpec], activity_logger=None) -> None:
+        self.activity_logger = activity_logger
+        self._services: dict[str, DiscordService] = {}
+        for spec in accounts:
+            service = DiscordService(
+                spec.token,
+                activity_logger,
+                account_id=spec.id,
+                account_name=spec.name,
+            )
+            self._services[spec.id] = service
+
+    def all_accounts(self) -> list[DiscordService]:
+        """Semua account yang dikelola, urutan sesuai pendaftaran."""
+        return list(self._services.values())
+
+    def get(self, account_id: str) -> DiscordService | None:
+        """Ambil service untuk account id tertentu, atau None jika tidak ada."""
+        return self._services.get(account_id)
+
+    def any_running(self) -> bool:
+        """True jika minimal satu account online."""
+        return any(service.is_running for service in self._services.values())
+
+    def start(self, account_id: str) -> DiscordService:
+        """Mulai (login) satu account."""
+        service = self._services.get(account_id)
+        if service is None:
+            raise RuntimeError(f"Account '{account_id}' tidak ditemukan")
+        service.start()
+        return service
+
+    def stop(self, account_id: str) -> None:
+        """Hentikan satu account."""
+        service = self._services.get(account_id)
+        if service:
+            service.stop()
+
+    def stop_all(self) -> None:
+        """Hentikan semua account."""
+        for service in self._services.values():
+            service.stop()
+
+    def update_token(self, account_id: str, token: str) -> None:
+        """Perbarui token untuk satu account."""
+        service = self._services.get(account_id)
+        if service is None:
+            raise RuntimeError(f"Account '{account_id}' tidak ditemukan")
+        token = token.strip()
+        if not token:
+            raise RuntimeError("Token tidak boleh kosong")
+        service.token = token
+        service._headers["Authorization"] = token

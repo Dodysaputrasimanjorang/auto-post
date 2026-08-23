@@ -1,18 +1,19 @@
 # Auto Discord Poster
 
-A local-only Discord auto poster that uses a single Discord webhook:
+A local-only Discord auto poster that uses user-account HTTP API with **2 Discord accounts**:
 
-- Single webhook integration
+- Dual account integration (each with its own token & login status)
 - Local dashboard
-- Multiple auto-post jobs
+- Multiple auto-post jobs assigned per account
 - JSON-based storage
 - Scheduled message delivery
 - Basic activity logging
 
 ## Features implemented
 
-- Webhook status indicator
-- Create, enable, disable, and delete auto-post jobs
+- Account status indicator for Akun 1 & Akun 2
+- Per-account token management
+- Create, enable, disable, and delete auto-post jobs (assigned to an account)
 - Local dashboard without login
 - Automatic scheduling while the app is running
 - Message delivery logs to file
@@ -32,12 +33,14 @@ This starter implements the foundation for:
 ## Setup
 
 1. Copy `.env.example` to `.env`
-2. Fill in your Discord webhook URL
-3. Install dependencies
-4. Run `python app.py`
+2. Fill in `DISCORD_TOKEN` (Akun 1) and `DISCORD_TOKEN2` (Akun 2)
+3. Optionally set `ACCOUNT_1_NAME` / `ACCOUNT_2_NAME` for labels
+4. Install dependencies
+5. Run `python app.py`
 
 ## Notes
 
 - This is local-only and does not include login.
-- Message sending only works while the webhook URL is configured.
+- Message sending only works while the respective account token is configured.
 - Data is stored in `data/automations.json`.
+- Saving a token via the dashboard writes it into `.env`.

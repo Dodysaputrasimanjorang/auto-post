@@ -1,11 +1,14 @@
 from __future__ import annotations
 
-import os
 from flask import Flask, flash, jsonify, redirect, render_template, request, url_for
 from dotenv import load_dotenv
 
-from .config import DISCORD_TOKEN, save_discord_token
-from .discord_service import DiscordService
+from .config import (
+    ACCOUNT_1_ID,
+    get_account_token,
+    save_discord_token,
+)
+from .discord_service import DiscordManager
 from .models import Automation
 from .scheduler_service import SchedulerService
 from .storage import JsonStore
@@ -13,7 +16,7 @@ from .storage import JsonStore
 
 def create_app(
     store: JsonStore,
-    bot_service: DiscordService,
+    bot_manager: DiscordManager,
     scheduler: SchedulerService,
     secret_key: str,
     activity_logger=None,
@@ -28,67 +31,91 @@ def create_app(
     @app.get("/")
     def dashboard() -> str:
         automations = store.list_automations()
-        guilds = bot_service.guilds_snapshot()
-        guilds_payload = [
+        accounts = bot_manager.all_accounts()
+
+        # Panel "Server & Channel" + opsi form: dikelompokkan per account
+        accounts_guilds = [
             {
-                "id": guild.id,
-                "name": guild.name,
-                "channels": [{"id": channel.id, "name": channel.name} for channel in guild.channels],
+                "id": account.account_id,
+                "name": account.account_name,
+                "is_running": account.is_running,
+                "has_token": bool(account.token),
+                "guilds": account.guilds_snapshot(),
             }
-            for guild in guilds
+            for account in accounts
         ]
-        guild_lookup = {guild.id: guild for guild in guilds}
+
+        account_names = {account.account_id: account.account_name for account in accounts}
+        channel_names: dict[tuple[str, str], str] = {}
+        for acc in accounts_guilds:
+            for guild in acc["guilds"]:
+                for channel in guild.channels:
+                    channel_names[(acc["id"], channel.id)] = channel.name
+
         activity_logs = activity_logger.list(100) if activity_logger else []
         return render_template(
             "dashboard.html",
             automations=automations,
-            guilds=guilds,
-            guilds_payload=guilds_payload,
-            guild_lookup=guild_lookup,
-            bot_ready=bot_service.is_running,
-            has_token=bool(DISCORD_TOKEN),
+            accounts=accounts,
+            accounts_guilds=accounts_guilds,
+            account_names=account_names,
+            channel_names=channel_names,
+            bot_ready=bot_manager.any_running(),
             activity_logs=activity_logs,
         )
 
     @app.post("/account/token")
     def update_token() -> str:
+        account_id = request.form.get("account_id", "").strip() or ACCOUNT_1_ID
         token = request.form.get("discord_token", "").strip()
+        account = bot_manager.get(account_id)
+        if account is None:
+            flash("Account tidak ditemukan.", "error")
+            return redirect(url_for("dashboard"))
         if not token:
             flash("Token Discord tidak boleh kosong.", "error")
             return redirect(url_for("dashboard"))
         try:
-            save_discord_token(token)
-            bot_service.token = token
-            bot_service._headers["Authorization"] = token
-            _activity_log("token_updated", "info", "Token Discord diperbarui")
-            flash("Token Discord berhasil disimpan.", "success")
+            save_discord_token(token, account_id)
+            bot_manager.update_token(account_id, token)
+            _activity_log("token_updated", "info", f"Token '{account.account_name}' diperbarui")
+            flash(f"Token untuk '{account.account_name}' berhasil disimpan.", "success")
         except Exception as exc:
             flash(f"Gagal menyimpan token: {exc}", "error")
         return redirect(url_for("dashboard"))
 
     @app.post("/account/start")
     def start_account() -> str:
+        account_id = request.form.get("account_id", "").strip() or ACCOUNT_1_ID
+        account = bot_manager.get(account_id)
+        if account is None:
+            flash("Account tidak ditemukan.", "error")
+            return redirect(url_for("dashboard"))
         try:
-            # Reload token dari .env (untuk handle Flask debug reload)
+            # Reload token dari .env (untuk handle kasus token diubah di luar dashboard)
             load_dotenv()
-            fresh_token = os.getenv("DISCORD_TOKEN", "").strip()
+            fresh_token = get_account_token(account_id)
             if not fresh_token:
-                raise RuntimeError("DISCORD_TOKEN belum diisi di .env")
-            bot_service.token = fresh_token
-            bot_service._headers["Authorization"] = fresh_token
-            bot_service.start()
-            _activity_log("account_start", "info", "Akun Discord dijalankan")
-            flash("Akun Discord mulai dijalankan.", "success")
+                raise RuntimeError("Token account belum diisi di .env")
+            bot_manager.update_token(account_id, fresh_token)
+            bot_manager.start(account_id)
+            _activity_log("account_start", "info", f"Akun '{account.account_name}' dijalankan")
+            flash(f"Akun '{account.account_name}' mulai dijalankan.", "success")
         except Exception as exc:
-            _activity_log("account_start_error", "error", f"Gagal menjalankan akun: {exc}")
-            flash(f"Akun Discord gagal dijalankan: {exc}", "error")
+            _activity_log("account_start_error", "error", f"Gagal menjalankan akun '{account.account_name}': {exc}")
+            flash(f"Akun '{account.account_name}' gagal dijalankan: {exc}", "error")
         return redirect(url_for("dashboard"))
 
     @app.post("/account/stop")
     def stop_account() -> str:
-        bot_service.stop()
-        _activity_log("account_stop", "info", "Akun Discord dihentikan")
-        flash("Akun Discord dihentikan.", "success")
+        account_id = request.form.get("account_id", "").strip() or ACCOUNT_1_ID
+        account = bot_manager.get(account_id)
+        if account is None:
+            flash("Account tidak ditemukan.", "error")
+            return redirect(url_for("dashboard"))
+        bot_manager.stop(account_id)
+        _activity_log("account_stop", "info", f"Akun '{account.account_name}' dihentikan")
+        flash(f"Akun '{account.account_name}' dihentikan.", "success")
         return redirect(url_for("dashboard"))
 
     @app.post("/automations")
@@ -98,14 +125,19 @@ def create_app(
         message = request.form.get("message", "").strip()
         interval_minutes = int(request.form.get("interval_minutes", "60"))
 
-        if "|" not in channel_target:
-            flash("Pilih server dan channel dengan benar.", "error")
+        parts = channel_target.split("|")
+        if len(parts) != 3:
+            flash("Pilih account, server, dan channel dengan benar.", "error")
             return redirect(url_for("dashboard"))
 
-        guild_id, channel_id = channel_target.split("|", 1)
+        account_id, guild_id, channel_id = parts
 
-        if not all([name, guild_id, channel_id, message]):
+        if not all([name, account_id, guild_id, channel_id, message]):
             flash("Semua field automation wajib diisi.", "error")
+            return redirect(url_for("dashboard"))
+
+        if bot_manager.get(account_id) is None:
+            flash("Account yang dipilih tidak ditemukan.", "error")
             return redirect(url_for("dashboard"))
 
         automation = Automation.create(
@@ -114,10 +146,13 @@ def create_app(
             channel_id=channel_id,
             message=message,
             interval_minutes=interval_minutes,
+            account_id=account_id,
         )
         store.upsert_automation(automation)
         scheduler.schedule(automation)
-        _activity_log("automation_created", "info", f"Automation '{name}' dibuat")
+        account = bot_manager.get(account_id)
+        account_label = account.account_name if account else account_id
+        _activity_log("automation_created", "info", f"Automation '{name}' dibuat via {account_label}")
         flash("Automation berhasil dibuat.", "success")
         return redirect(url_for("dashboard"))
 
@@ -152,14 +187,33 @@ def create_app(
 
     @app.get("/api/guilds")
     def api_guilds():
+        account_id = request.args.get("account", "").strip()
+        accounts = [bot_manager.get(account_id)] if bot_manager.get(account_id) else bot_manager.all_accounts()
+        result = []
+        for account in accounts:
+            for guild in account.guilds_snapshot():
+                result.append(
+                    {
+                        "account_id": account.account_id,
+                        "account_name": account.account_name,
+                        "id": guild.id,
+                        "name": guild.name,
+                        "channels": [{"id": channel.id, "name": channel.name} for channel in guild.channels],
+                    }
+                )
+        return jsonify(result)
+
+    @app.get("/api/accounts")
+    def api_accounts():
         return jsonify(
             [
                 {
-                    "id": guild.id,
-                    "name": guild.name,
-                    "channels": [{"id": channel.id, "name": channel.name} for channel in guild.channels],
+                    "id": account.account_id,
+                    "name": account.account_name,
+                    "is_running": account.is_running,
+                    "has_token": bool(account.token),
                 }
-                for guild in bot_service.guilds_snapshot()
+                for account in bot_manager.all_accounts()
             ]
         )
 

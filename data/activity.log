@@ -1,5 +1,9 @@
-2026-08-19 18:34:56,294 | INFO | __main__ | ==================================================
-2026-08-19 18:34:56,296 | INFO | __main__ | Dashboard tersedia di: http://127.0.0.1:5000
-2026-08-19 18:34:56,296 | INFO | __main__ | ==================================================
-2026-08-19 18:37:38,503 | INFO | app.discord_service | Akun Discord login sebagai exfu7151
-2026-08-19 18:40:31,361 | INFO | app.discord_service | Akun Discord dihentikan
+2026-08-24 00:02:19,311 | INFO | __main__ | ==================================================
+2026-08-24 00:02:19,312 | INFO | __main__ | Dashboard tersedia di: http://127.0.0.1:5000
+2026-08-24 00:02:19,313 | INFO | __main__ | ==================================================
+2026-08-24 00:02:30,138 | INFO | app.discord_service | Akun Discord login sebagai exfu7151
+2026-08-24 00:02:41,217 | INFO | app.discord_service | Akun Discord login sebagai paulwasheree
+2026-08-24 02:07:59,404 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-08-24 02:07:59,468 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-08-24 02:22:54,053 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-08-24 02:22:54,112 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)

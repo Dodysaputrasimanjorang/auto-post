@@ -5,39 +5,62 @@
   <div class="token-header">
     <div>
       <h2>Token Discord</h2>
-      <p class="muted">Tempel token Discord Anda di sini untuk mengganti token tanpa mengedit file.</p>
+      <p class="muted">Tempel token per account di sini untuk mengganti token tanpa mengedit file.</p>
     </div>
-    <span class="pill {{ 'online' if has_token else 'offline' }}">
-      {{ 'Token tersimpan' if has_token else 'Token belum diisi' }}
-    </span>
   </div>
-  <form method="post" action="/account/token" class="token-form">
-    <input
-      type="password"
-      name="discord_token"
-      placeholder="Tempel token Discord Anda di sini..."
-      autocomplete="off"
-      spellcheck="false"
-    />
-    <button type="submit">Simpan Token</button>
-  </form>
+  {% for account in accounts %}
+    <div class="token-account">
+      <div class="token-account-header">
+        <strong>{{ account.account_name }}</strong>
+        <span class="pill {{ 'online' if account.token else 'offline' }}">
+          {{ 'Token tersimpan' if account.token else 'Token belum diisi' }}
+        </span>
+      </div>
+      <form method="post" action="/account/token" class="token-form">
+        <input type="hidden" name="account_id" value="{{ account.account_id }}" />
+        <input
+          type="password"
+          name="discord_token"
+          placeholder="Tempel token Discord untuk {{ account.account_name }}..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button type="submit">Simpan Token</button>
+      </form>
+    </div>
+  {% endfor %}
 </section>
 
 <header class="hero">
   <div>
     <p class="eyebrow">Local-only dashboard</p>
     <h1>Auto Discord Poster</h1>
-    <p class="muted">Kelola akun Discord pribadi, channel, dan jadwal auto post tanpa login.</p>
+    <p class="muted">Kelola 2 akun Discord pribadi, channel, dan jadwal auto post tanpa login.</p>
   </div>
   <div class="status-card">
     <span class="status-label">Akun Discord</span>
-    <strong class="status-value {{ 'online' if bot_ready else 'offline' }}">
-      {{ 'Online' if bot_ready else 'Offline' }}
-    </strong>
-    <div class="actions">
-      <form method="post" action="/account/start"><button type="submit">Start Account</button></form>
-      <form method="post" action="/account/stop"><button type="submit" class="secondary">Stop Account</button></form>
-    </div>
+    {% for account in accounts %}
+      <div class="account-row">
+        <div class="account-row-info">
+          <strong class="status-value {{ 'online' if account.is_running else 'offline' }}">
+            {{ account.account_name }}
+          </strong>
+          <span class="pill {{ 'online' if account.is_running else 'offline' }}">
+            {{ 'Online' if account.is_running else 'Offline' }}
+          </span>
+        </div>
+        <div class="actions">
+          <form method="post" action="/account/start">
+            <input type="hidden" name="account_id" value="{{ account.account_id }}" />
+            <button type="submit">Start</button>
+          </form>
+          <form method="post" action="/account/stop">
+            <input type="hidden" name="account_id" value="{{ account.account_id }}" />
+            <button type="submit" class="secondary">Stop</button>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </header>
 
@@ -50,11 +73,22 @@
         <input name="name" placeholder="Promo Harian" required />
       </label>
       <label>
+        Account
+        <select id="account_id" name="account_id" required>
+          <option value="">Pilih account</option>
+          {% for account in accounts %}
+            <option value="{{ account.account_id }}">{{ account.account_name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
         Server
-        <select id="guild_id" name="guild_id" required>
+        <select id="guild_id" name="guild_id">
           <option value="">Pilih server</option>
-          {% for guild in guilds %}
-            <option value="{{ guild.id }}">{{ guild.name }}</option>
+          {% for acc in accounts_guilds %}
+            {% for guild in acc.guilds %}
+              <option value="{{ guild.id }}" data-account="{{ acc.id }}">{{ guild.name }} ({{ acc.name }})</option>
+            {% endfor %}
           {% endfor %}
         </select>
       </label>
@@ -62,9 +96,13 @@
         Channel
         <select id="channel_id" name="channel_target" required>
           <option value="">Pilih channel</option>
-          {% for guild in guilds %}
-            {% for channel in guild.channels %}
-              <option value="{{ guild.id }}|{{ channel.id }}">#{{ channel.name }} ({{ guild.name }})</option>
+          {% for acc in accounts_guilds %}
+            {% for guild in acc.guilds %}
+              {% for channel in guild.channels %}
+                <option value="{{ acc.id }}|{{ guild.id }}|{{ channel.id }}" data-account="{{ acc.id }}">
+                  #{{ channel.name }} ({{ guild.name }} • {{ acc.name }})
+                </option>
+              {% endfor %}
             {% endfor %}
           {% endfor %}
         </select>
@@ -85,16 +123,30 @@
 
   <article class="panel">
     <h2>Server & Channel</h2>
-    {% if guilds %}
+    {% if accounts_guilds %}
       <div class="guild-list">
-        {% for guild in guilds %}
+        {% for acc in accounts_guilds %}
           <details {% if loop.first %}open{% endif %}>
-            <summary>{{ guild.name }}</summary>
-            <ul>
-              {% for channel in guild.channels %}
-                <li>#{{ channel.name }} <span class="muted">{{ channel.id }}</span></li>
+            <summary>
+              {{ acc.name }}
+              <span class="pill {{ 'online' if acc.is_running else 'offline' }}">
+                {{ 'Online' if acc.is_running else 'Offline' }}
+              </span>
+            </summary>
+            {% if acc.guilds %}
+              {% for guild in acc.guilds %}
+                <div class="guild-block">
+                  <strong>{{ guild.name }}</strong>
+                  <ul>
+                    {% for channel in guild.channels %}
+                      <li>#{{ channel.name }} <span class="muted">{{ channel.id }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </div>
               {% endfor %}
-            </ul>
+            {% else %}
+              <p class="muted">Belum ada server terhubung. Start akun ini terlebih dahulu.</p>
+            {% endif %}
           </details>
         {% endfor %}
       </div>
@@ -112,8 +164,8 @@
         <thead>
           <tr>
             <th>Nama</th>
+            <th>Account</th>
             <th>Status</th>
-            <th>Server</th>
             <th>Channel</th>
             <th>Interval</th>
             <th>Last Sent</th>
@@ -125,13 +177,13 @@
           {% for automation in automations %}
             <tr>
               <td>{{ automation.name }}</td>
+              <td>{{ account_names.get(automation.account_id, automation.account_id) }}</td>
               <td>
                 <span class="pill {{ 'online' if automation.enabled else 'offline' }}">
                   {{ 'Aktif' if automation.enabled else 'Nonaktif' }}
                 </span>
               </td>
-              <td>{{ guild_lookup.get(automation.guild_id).name if guild_lookup.get(automation.guild_id) else automation.guild_id }}</td>
-              <td>{{ automation.channel_id }}</td>
+              <td>{{ channel_names.get((automation.account_id, automation.channel_id), automation.channel_id) }}</td>
               <td>{{ automation.interval_minutes }} menit</td>
               <td>{{ automation.last_sent_at or '-' }}</td>
               <td>{{ automation.next_run_at or '-' }}</td>
@@ -189,5 +241,27 @@
     <p class="muted">Belum ada aktivitas tercatat.</p>
   {% endif %}
 </section>
+
+<script>
+  // Filter opsi server/channel berdasarkan account yang dipilih
+  (function () {
+    const accountSelect = document.getElementById('account_id');
+    const guildSelect = document.getElementById('guild_id');
+    const channelSelect = document.getElementById('channel_id');
+
+    function filterByAccount() {
+      const account = accountSelect.value;
+      [guildSelect, channelSelect].forEach(function (select) {
+        Array.from(select.options).forEach(function (option) {
+          if (!option.value) return;
+          option.hidden = Boolean(account) && option.dataset.account !== account;
+        });
+      });
+    }
+
+    accountSelect.addEventListener('change', filterByAccount);
+    filterByAccount();
+  })();
+</script>
 
 {% endblock %}

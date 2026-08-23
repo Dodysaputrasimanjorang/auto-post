@@ -1,3 +1,108 @@
 {
-  "automations": []
+  "automations": [
+    {
+      "id": "66d5bbbee2e2448c9bdd12a3734770bf",
+      "name": "background",
+      "guild_id": "571992648190263317",
+      "channel_id": "782718523629633567",
+      "message": "Cheap Vend Shop at KASTON\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at KASTON\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account2",
+      "enabled": true,
+      "created_at": "2026-08-24T00:02:24.501434+07:00",
+      "last_sent_at": "2026-08-24T02:07:59.457754+07:00",
+      "next_run_at": "2026-08-24T04:13:05.457754+07:00"
+    },
+    {
+      "id": "b7e4bd63828440f29fb97373eca1523c",
+      "name": "background",
+      "guild_id": "571992648190263317",
+      "channel_id": "782718523629633567",
+      "message": "Cheap Vend Shop at TESTAM\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at TESTAM\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account1",
+      "enabled": true,
+      "created_at": "2026-08-24T00:17:21.424182+07:00",
+      "last_sent_at": "2026-08-24T02:22:54.100761+07:00",
+      "next_run_at": "2026-08-24T04:27:59.100761+07:00"
+    },
+    {
+      "id": "dc2e20310bf949998f622660934ccac1",
+      "name": "doors",
+      "guild_id": "571992648190263317",
+      "channel_id": "846671811223355402",
+      "message": "Cheap Vend Shop at TESTAM\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at TESTAM\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account1",
+      "enabled": true,
+      "created_at": "2026-08-24T00:31:12.630566+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T02:36:36.630566+07:00"
+    },
+    {
+      "id": "56bf6b6b3bc44255a02eabdf502e516f",
+      "name": "doors",
+      "guild_id": "571992648190263317",
+      "channel_id": "846671811223355402",
+      "message": "Cheap Vend Shop at KASTON\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at KASTON\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account2",
+      "enabled": true,
+      "created_at": "2026-08-24T00:45:00.289674+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T02:50:32.289674+07:00"
+    },
+    {
+      "id": "a05967805ac04df89b8c7e6cf3d7b735",
+      "name": "sign",
+      "guild_id": "571992648190263317",
+      "channel_id": "846661246303469598",
+      "message": "Cheap Vend Shop at TESTAM\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at TESTAM\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account1",
+      "enabled": true,
+      "created_at": "2026-08-24T01:00:50.773325+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T03:05:55.773325+07:00"
+    },
+    {
+      "id": "fe2e049fb99d49d3af261f9b6a718677",
+      "name": "sign",
+      "guild_id": "571992648190263317",
+      "channel_id": "846661246303469598",
+      "message": "Cheap Vend Shop at KASTON\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at KASTON\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account2",
+      "enabled": true,
+      "created_at": "2026-08-24T01:21:49.927817+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T03:26:54.927817+07:00"
+    },
+    {
+      "id": "e44842f36458470d9e20a7a53dd2a5ca",
+      "name": "platform",
+      "guild_id": "571992648190263317",
+      "channel_id": "846673193426354176",
+      "message": "Cheap Vend Shop at KASTON\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at KASTON\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account2",
+      "enabled": true,
+      "created_at": "2026-08-24T01:35:41.756598+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T03:41:15.756598+07:00"
+    },
+    {
+      "id": "742404127d2746f09a482e95b2321899",
+      "name": "platform",
+      "guild_id": "571992648190263317",
+      "channel_id": "846673193426354176",
+      "message": "Cheap Vend Shop at TESTAM\r\n\r\nSell Display Block 5WL | Sell Display Box 3WL | Sell Display Shelf 2WL | Sell Transmatter Field 2WL | Sell Donation Box 5WL | Sell Roulette Wheel 3/WL | Sell Bulletin Board 2WL | Sell Telephone 3WL | Sell Forcefield 5WL | Sell Screen Door 2/WL | Sell Air Vent 25/WL | Sell Fire Escape 8/WL | Sell Dragon Gate 2WL | Sell Open Sign 1WL | Sell Street Sign 25/WL | Sell Tenement Building 100/WL | Sell Hedge 40/WL | Sell Pillar 2WL | Sell Glowy Block 1/WL | Sell Cutaway  Building 30/WL | Sell Crystal Block 80WL| Sell Signal Jammer 6WL | Sell Punch Jammer 30WL | Sell Zombie Jammer 30WL \r\n\r\nSell at TESTAM\r\nClearing Stock",
+      "interval_minutes": 125,
+      "account_id": "account1",
+      "enabled": true,
+      "created_at": "2026-08-24T02:03:56.833933+07:00",
+      "last_sent_at": null,
+      "next_run_at": "2026-08-24T04:09:25.833933+07:00"
+    }
+  ]
 }

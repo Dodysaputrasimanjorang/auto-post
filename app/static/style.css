@@ -71,7 +71,54 @@ h1, h2 { margin: .25rem 0 .75rem; }
   backdrop-filter: blur(18px);
 }
 
-.status-card { min-width: 280px; }
+.token-account {
+  display: grid;
+  gap: .5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.token-account:first-of-type {
+  border-top: none;
+}
+
+.token-account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: .6rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.account-row:first-of-type {
+  border-top: none;
+}
+
+.account-row-info {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.guild-block {
+  margin: .6rem 0 .6rem .5rem;
+}
+
+.guild-block ul {
+  margin: .25rem 0 .5rem;
+}
+
+.status-card {
+  min-width: 280px;
+}
 .status-label { display:block; color: var(--muted); margin-bottom: .35rem; }
 .status-value { font-size: 1.2rem; }
 .status-value.online, .pill.online { color: var(--success); }
