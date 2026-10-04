@@ -1,0 +1,19 @@
+[Unit]
+Description=Auto Discord Poster
+Documentation=file:///opt/auto-post/DEPLOY.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/auto-post
+ExecStart=/opt/auto-post/.venv/bin/python /opt/auto-post/app.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+# Batasi memori agar tidak mengganggu sistem di VPS RAM 1 GB
+MemoryMax=400M
+
+[Install]
+WantedBy=multi-user.target

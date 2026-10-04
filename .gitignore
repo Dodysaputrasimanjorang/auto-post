@@ -1,0 +1,27 @@
+# === Secrets / konfigurasi lokal ===
+.env
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# === Data runtime (dibuat otomatis oleh aplikasi) ===
+data/activity.log
+data/activity_web.json
+data/*.log
+
+# === PM2 / log ===
+logs/
+*.log
+.pm2/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

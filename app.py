@@ -20,6 +20,7 @@ from app.config import (
     FLASK_PORT,
     FLASK_SECRET_KEY,
     LOG_FILE,
+    RESET_ON_START,
 )
 from app.activity_logger import ActivityLogger
 from app.discord_service import AccountSpec, DiscordManager
@@ -65,17 +66,20 @@ app = create_app(store, bot_manager, scheduler, FLASK_SECRET_KEY, activity_logge
 def bootstrap() -> None:
     logger = logging.getLogger(__name__)
     activity_logger.log("server_start", "info", "Server dimulai")
-    logger.info("Server dimulai, data direset")
+    logger.info("Server dimulai%s", " (data direset)" if RESET_ON_START else "")
 
-    # 1. Hapus semua automation dari storage (ulang dari awal)
-    store.clear()
+    # 1. Hapus semua automation dari storage HANYA jika diminta (RESET_ON_START=true).
+    #    Default false agar data automation tidak hilang saat server restart (penting untuk 24/7).
+    if RESET_ON_START:
+        store.clear()
 
-    # 2. Bersihkan file log lama
-    try:
-        with open(LOG_FILE, "w", encoding="utf-8"):
+    # 2. Bersihkan file log lama HANYA jika reset diminta
+    if RESET_ON_START:
+        try:
+            with open(LOG_FILE, "w", encoding="utf-8"):
+                pass
+        except OSError:
             pass
-    except OSError:
-        pass
 
     # 3. Mulai scheduler (storage kosong -> tidak ada job lama)
     scheduler.start()
@@ -106,5 +110,20 @@ if __name__ == "__main__":
     logger.info("=" * 50)
     logger.info("Dashboard tersedia di: http://%s:%s", FLASK_HOST, FLASK_PORT)
     logger.info("=" * 50)
-    # use_reloader=False agar bootstrap() hanya dijalankan sekali (tidak duplikat)
-    app.run(host=FLASK_HOST, port=FLASK_PORT, debug=FLASK_DEBUG, use_reloader=False)
+    if FLASK_DEBUG:
+        # Mode development: reloader dimatikan agar bootstrap() tidak jalan dua kali
+        app.run(host=FLASK_HOST, port=FLASK_PORT, debug=True, use_reloader=False)
+    else:
+        # Mode produksi (24/7): gunakan waitress sebagai WSGI server.
+        # Tetap satu proses -> APScheduler tunggal (tidak ada job ganda).
+        try:
+            from waitress import serve
+        except ImportError:
+            logger.warning(
+                "waitress belum terpasang, memakai Flask dev server. "
+                "Jalankan: pip install waitress"
+            )
+            app.run(host=FLASK_HOST, port=FLASK_PORT, debug=False, use_reloader=False)
+        else:
+            logger.info("Menjalankan waitress (production WSGI server)")
+            serve(app, host=FLASK_HOST, port=FLASK_PORT, threads=8, ident="AutoDiscordPoster")

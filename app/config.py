@@ -31,6 +31,9 @@ FLASK_HOST = os.getenv("FLASK_HOST", "127.0.0.1")
 FLASK_PORT = int(os.getenv("FLASK_PORT", "5000"))
 FLASK_DEBUG = os.getenv("FLASK_DEBUG", "false").lower() == "true"
 AUTO_START_ACCOUNT = os.getenv("AUTO_START_ACCOUNT", os.getenv("AUTO_START_BOT", "false")).lower() == "true"
+# Jika true, semua automation + log lama dihapus setiap start.
+# Default false agar data aman saat server restart (penting untuk 24/7).
+RESET_ON_START = os.getenv("RESET_ON_START", "false").lower() == "true"
 
 
 def _account_token_key(account_id: str) -> str:

@@ -1,9 +1,129 @@
-2026-08-24 00:02:19,311 | INFO | __main__ | ==================================================
-2026-08-24 00:02:19,312 | INFO | __main__ | Dashboard tersedia di: http://127.0.0.1:5000
-2026-08-24 00:02:19,313 | INFO | __main__ | ==================================================
-2026-08-24 00:02:30,138 | INFO | app.discord_service | Akun Discord login sebagai exfu7151
-2026-08-24 00:02:41,217 | INFO | app.discord_service | Akun Discord login sebagai paulwasheree
-2026-08-24 02:07:59,404 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
-2026-08-24 02:07:59,468 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
-2026-08-24 02:22:54,053 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
-2026-08-24 02:22:54,112 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 10:30:21,447 | INFO | __main__ | ==================================================
+2026-10-03 10:30:21,448 | INFO | __main__ | Dashboard tersedia di: http://127.0.0.1:5000
+2026-10-03 10:30:21,449 | INFO | __main__ | ==================================================
+2026-10-03 10:30:37,727 | INFO | app.discord_service | Akun Discord login sebagai hzufig
+2026-10-03 10:46:42,932 | INFO | app.discord_service | Akun Discord login sebagai notyourpouls
+2026-10-03 12:39:46,836 | WARNING | apscheduler.executors.default | Run time of job "SchedulerService._run_automation (trigger: interval[2:05:00], next run at: 2026-10-03 14:44:44 WIB)" was missed by 0:00:02.677518
+2026-10-03 12:52:26,388 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 12:52:26,491 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 13:06:05,466 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 13:06:05,535 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 13:21:57,353 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 13:21:57,396 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-03 13:35:15,631 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 13:35:15,637 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 1)
+2026-10-03 13:51:54,519 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 13:51:54,619 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 2)
+2026-10-03 14:05:43,876 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 14:05:44,015 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-03 14:21:57,815 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 14:21:57,879 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-03 14:23:09,673 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 14:23:09,718 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-03 14:44:46,034 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 14:44:46,115 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 14:57:25,821 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 14:57:25,842 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 15:02:02,776 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 15:02:02,804 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 2)
+2026-10-03 15:11:03,982 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 15:11:03,996 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 15:26:57,399 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 15:26:57,478 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-03 15:40:15,725 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 15:40:15,736 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 1)
+2026-10-03 15:57:42,586 | ERROR | app.scheduler_service | Gagal mengirim automation sign: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2aaa4110>, 'Connection to discord.com timed out. (connect timeout=10)'))
+2026-10-03 16:10:44,342 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 16:10:44,361 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-03 16:26:57,907 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 16:26:57,923 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-03 16:28:09,109 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 16:28:09,126 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-03 16:49:45,922 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 16:49:45,964 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 17:02:25,756 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 17:02:25,773 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 17:07:02,915 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 17:07:02,965 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 2)
+2026-10-03 17:16:04,693 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 17:16:04,752 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 17:31:57,668 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 17:31:57,730 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-03 17:46:04,949 | ERROR | app.scheduler_service | Gagal mengirim automation sign: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2a9b6f10>, 'Connection to discord.com timed out. (connect timeout=10)'))
+2026-10-03 17:47:18,758 | WARNING | app.discord_service | Fetch guilds timeout (jaringan)
+2026-10-03 17:48:03,776 | WARNING | app.discord_service | Gagal memuat channel guild 'The Lost Nemo!' (571992648190263317) setelah 3 percobaan: ConnectTimeout: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/guilds/571992648190263317/cha
+2026-10-03 17:48:23,309 | WARNING | app.discord_service | Fetch guilds timeout (jaringan)
+2026-10-03 17:53:08,044 | WARNING | app.discord_service | Gagal memuat channel guild 'The Lost Nemo!' (571992648190263317) setelah 3 percobaan: ConnectTimeout: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/guilds/571992648190263317/cha
+2026-10-03 18:02:42,653 | ERROR | app.scheduler_service | Gagal mengirim automation sign: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2aa78690>, 'Connection to discord.com timed out. (connect timeout=10)'))
+2026-10-03 18:03:08,822 | WARNING | app.discord_service | Fetch guilds timeout (jaringan)
+2026-10-03 18:03:34,579 | WARNING | app.discord_service | Fetch guilds gagal: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/users/@me/guilds?limit=200 (Caused by NameResolutionError("HTTPSConnection(host='discord.com', port=443): Failed to resolve 'discord.com' ([Errno 11001] getaddrinfo failed)"))
+2026-10-03 18:15:43,493 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 18:15:43,516 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-03 18:31:57,619 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 18:31:57,628 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-03 18:33:08,704 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 18:33:08,718 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-03 18:54:45,371 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 18:54:45,383 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 19:07:26,034 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 19:07:26,059 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 19:12:04,045 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 19:12:04,057 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 2)
+2026-10-03 19:21:03,387 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 19:21:03,404 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 19:36:58,988 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 19:36:59,015 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-03 19:50:16,647 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 19:50:16,692 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 1)
+2026-10-03 20:06:54,031 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 20:06:54,068 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 2)
+2026-10-03 20:20:44,651 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 20:20:44,676 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-03 20:36:58,719 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 20:36:58,758 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-03 20:38:09,414 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 20:38:09,442 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-03 20:59:45,557 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 20:59:45,578 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 21:12:26,432 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 21:12:26,521 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 21:17:03,061 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 21:17:03,098 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 2)
+2026-10-03 21:26:06,682 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 21:26:06,744 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 21:41:57,433 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 21:41:57,492 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-03 21:55:17,182 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 21:55:17,213 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 1)
+2026-10-03 22:11:55,688 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-03 22:11:55,722 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 2)
+2026-10-03 22:25:45,230 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 22:25:45,316 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-03 22:41:59,915 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-03 22:41:59,952 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-03 22:43:09,987 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 22:43:10,043 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-03 23:04:47,558 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 23:04:47,602 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-03 23:17:27,070 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-03 23:17:27,090 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 2)
+2026-10-03 23:22:03,788 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-03 23:22:03,795 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 2)
+2026-10-03 23:31:05,061 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 23:31:05,077 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 1)
+2026-10-03 23:34:42,844 | WARNING | app.discord_service | Fetch guilds gagal: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/users/@me/guilds?limit=200 (Caused by NameResolutionError("HTTPSConnection(host='discord.com', port=443): Failed to resolve 'discord.com' ([Errno 11001] getaddrinfo failed)"))
+2026-10-03 23:46:57,510 | INFO | app.discord_service | Pesan terkirim ke channel 846671811223355402
+2026-10-03 23:46:57,560 | INFO | app.scheduler_service | Automation terkirim: doors (via Akun 2)
+2026-10-04 00:00:16,050 | INFO | app.discord_service | Pesan terkirim ke channel 846661246303469598
+2026-10-04 00:00:16,061 | INFO | app.scheduler_service | Automation terkirim: sign (via Akun 1)
+2026-10-04 00:17:03,943 | ERROR | app.scheduler_service | Gagal mengirim automation sign: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by NameResolutionError("HTTPSConnection(host='discord.com', port=443): Failed to resolve 'discord.com' ([Errno 11001] getaddrinfo failed)"))
+2026-10-04 00:30:45,734 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-04 00:30:45,828 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 1)
+2026-10-04 00:47:02,455 | INFO | app.discord_service | Pesan terkirim ke channel 846673193426354176
+2026-10-04 00:47:02,552 | INFO | app.scheduler_service | Automation terkirim: platform (via Akun 2)
+2026-10-04 00:48:10,695 | INFO | app.discord_service | Pesan terkirim ke channel 782722952256159754
+2026-10-04 00:48:10,753 | INFO | app.scheduler_service | Automation terkirim: vending (via Akun 1)
+2026-10-04 01:09:46,622 | INFO | app.discord_service | Pesan terkirim ke channel 782718523629633567
+2026-10-04 01:09:46,682 | INFO | app.scheduler_service | Automation terkirim: background (via Akun 1)
+2026-10-04 01:18:47,554 | INFO | app.discord_service | Akun Discord dihentikan
+2026-10-04 01:18:52,614 | INFO | app.discord_service | Akun Discord dihentikan

@@ -1,980 +1,1202 @@
 [
   {
-    "timestamp": "2026-08-24T02:22:54.114041+07:00",
+    "timestamp": "2026-10-04T01:18:52.619254+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-04T01:18:47.565407+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-04T01:09:46.701338+07:00",
     "action": "automation_sent",
     "level": "info",
     "detail": "Automation 'background' terkirim via Akun 1"
   },
   {
-    "timestamp": "2026-08-24T02:22:54.069902+07:00",
+    "timestamp": "2026-10-04T01:09:46.632410+07:00",
     "action": "message_sent",
     "level": "info",
     "detail": "Pesan terkirim ke channel 782718523629633567"
   },
   {
-    "timestamp": "2026-08-24T02:07:59.475003+07:00",
+    "timestamp": "2026-10-04T00:48:10.756899+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-04T00:48:10.700370+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-04T00:47:02.556561+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-04T00:47:02.470117+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-04T00:30:45.829139+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-04T00:30:45.753781+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-04T00:17:03.949157+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'sign' gagal: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by NameResolutionError(\"HTTPSConnection(host='discord.com', port=443): Failed to resolve 'discord.com' ([Errno 11001] getaddrinfo failed)\"))"
+  },
+  {
+    "timestamp": "2026-10-04T00:00:16.063912+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-04T00:00:16.052138+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T23:46:57.561661+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T23:46:57.516179+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T23:31:05.078430+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T23:31:05.062871+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T23:22:03.796278+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T23:22:03.790233+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T23:17:27.094490+07:00",
     "action": "automation_sent",
     "level": "info",
     "detail": "Automation 'background' terkirim via Akun 2"
   },
   {
-    "timestamp": "2026-08-24T02:07:59.433502+07:00",
+    "timestamp": "2026-10-03T23:17:27.072650+07:00",
     "action": "message_sent",
     "level": "info",
     "detail": "Pesan terkirim ke channel 782718523629633567"
   },
   {
-    "timestamp": "2026-08-24T02:03:56.895420+07:00",
-    "action": "automation_created",
+    "timestamp": "2026-10-03T23:04:47.607283+07:00",
+    "action": "automation_sent",
     "level": "info",
-    "detail": "Automation 'platform' dibuat via Akun 1"
+    "detail": "Automation 'background' terkirim via Akun 1"
   },
   {
-    "timestamp": "2026-08-24T01:35:41.768220+07:00",
+    "timestamp": "2026-10-03T23:04:47.563968+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T22:43:10.060219+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T22:43:09.988021+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T22:41:59.955236+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T22:41:59.920943+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T22:25:45.323737+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T22:25:45.246852+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T22:11:55.723437+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T22:11:55.693773+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T21:55:17.214125+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T21:55:17.191164+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T21:41:57.494605+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T21:41:57.446721+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T21:26:06.757906+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T21:26:06.688240+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T21:17:03.100170+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T21:17:03.064761+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T21:12:26.526618+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T21:12:26.438280+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T20:59:45.579862+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T20:59:45.560504+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T20:38:09.445381+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T20:38:09.417352+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T20:36:58.762029+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T20:36:58.725000+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T20:20:44.677905+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T20:20:44.655436+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T20:06:54.071837+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T20:06:54.035554+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T19:50:16.696324+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T19:50:16.653117+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T19:36:59.016960+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T19:36:58.994029+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T19:21:03.406276+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T19:21:03.389241+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T19:12:04.058365+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T19:12:04.047835+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T19:07:26.061160+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T19:07:26.038343+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T18:54:45.385165+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T18:54:45.372225+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T18:33:08.719013+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T18:33:08.706507+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T18:31:57.628701+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T18:31:57.620198+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T18:15:43.518085+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T18:15:43.495894+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T18:02:42.661777+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'sign' gagal: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2aa78690>, 'Connection to discord.com timed out. (connect timeout=10)'))"
+  },
+  {
+    "timestamp": "2026-10-03T17:53:08.050918+07:00",
+    "action": "channel_fetch_error",
+    "level": "error",
+    "detail": "Gagal memuat channel 'The Lost Nemo!': ConnectTimeout: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/guilds/571992648190263317/cha"
+  },
+  {
+    "timestamp": "2026-10-03T17:48:03.782176+07:00",
+    "action": "channel_fetch_error",
+    "level": "error",
+    "detail": "Gagal memuat channel 'The Lost Nemo!': ConnectTimeout: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/guilds/571992648190263317/cha"
+  },
+  {
+    "timestamp": "2026-10-03T17:46:04.955640+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'sign' gagal: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2a9b6f10>, 'Connection to discord.com timed out. (connect timeout=10)'))"
+  },
+  {
+    "timestamp": "2026-10-03T17:31:57.735335+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T17:31:57.676990+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T17:16:04.754766+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T17:16:04.696810+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T17:07:02.967928+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T17:07:02.918663+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T17:02:25.775908+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T17:02:25.759739+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T16:49:45.968118+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T16:49:45.926183+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T16:28:09.127575+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T16:28:09.111802+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T16:26:57.925286+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T16:26:57.912696+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T16:10:44.361351+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T16:10:44.343271+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T15:57:42.590855+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'sign' gagal: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/846661246303469598/messages (Caused by ConnectTimeoutError(<HTTPSConnection(host='discord.com', port=443) at 0x25f2aaa4110>, 'Connection to discord.com timed out. (connect timeout=10)'))"
+  },
+  {
+    "timestamp": "2026-10-03T15:40:15.736280+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T15:40:15.727234+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T15:26:57.482583+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T15:26:57.413426+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T15:11:03.997218+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T15:11:03.984219+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T15:02:02.813574+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T15:02:02.777641+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T14:57:25.845689+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T14:57:25.825991+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T14:44:46.119918+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T14:44:46.044032+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T14:23:09.723162+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T14:23:09.680994+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T14:21:57.907889+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T14:21:57.819167+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T14:05:44.040995+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T14:05:43.881566+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-03T13:51:54.630449+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T13:51:54.526041+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T13:35:15.638546+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T13:35:15.632536+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T13:21:57.401967+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T13:21:57.358466+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T13:06:05.542763+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T13:06:05.477580+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T12:56:47.246243+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'vending' dibuat via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T12:52:26.501606+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T12:52:26.396045+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-03T12:17:34.821212+07:00",
+    "action": "automation_created",
+    "level": "info",
+    "detail": "Automation 'vending' dibuat via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T12:16:37.678396+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'platform' dibuat via Akun 2"
   },
   {
-    "timestamp": "2026-08-24T01:21:49.956940+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'sign' dibuat via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-24T01:00:50.805602+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'sign' dibuat via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-24T00:45:00.333076+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'doors' dibuat via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-24T00:31:12.644575+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'doors' dibuat via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-24T00:17:21.452199+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'background' dibuat via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-24T00:03:49.052322+07:00",
-    "action": "automation_deleted",
-    "level": "info",
-    "detail": "Automation 'background' dihapus"
-  },
-  {
-    "timestamp": "2026-08-24T00:03:38.496155+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'background' dibuat via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:46.326698+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:41.640156+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:41.219562+07:00",
-    "action": "account_login",
-    "level": "info",
-    "detail": "Login sebagai paulwasheree"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:33.106695+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 1' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:30.518835+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 1' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:30.140918+07:00",
-    "action": "account_login",
-    "level": "info",
-    "detail": "Login sebagai exfu7151"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:24.538556+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'background' dibuat via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-24T00:02:19.266764+07:00",
-    "action": "server_start",
-    "level": "info",
-    "detail": "Server dimulai"
-  },
-  {
-    "timestamp": "2026-08-23T23:51:35.338054+07:00",
-    "action": "account_stop",
-    "level": "info",
-    "detail": "Akun Discord dihentikan"
-  },
-  {
-    "timestamp": "2026-08-23T23:51:30.276457+07:00",
-    "action": "account_stop",
-    "level": "info",
-    "detail": "Akun Discord dihentikan"
-  },
-  {
-    "timestamp": "2026-08-23T23:50:00.620575+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:51.911494+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:51.069386+07:00",
-    "action": "account_login",
-    "level": "info",
-    "detail": "Login sebagai paulwasheree"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:39.708173+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 1' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:36.219492+07:00",
-    "action": "account_login",
-    "level": "info",
-    "detail": "Login sebagai exfu7151"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:34.163114+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 1' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:32.181799+07:00",
-    "action": "account_start_error",
-    "level": "error",
-    "detail": "Gagal menjalankan akun 'Akun 1': Akun Discord gagal login"
-  },
-  {
-    "timestamp": "2026-08-23T23:49:22.221243+07:00",
-    "action": "server_start",
-    "level": "info",
-    "detail": "Server dimulai"
-  },
-  {
-    "timestamp": "2026-08-23T16:22:25.428204+07:00",
-    "action": "account_stop",
-    "level": "info",
-    "detail": "Akun Discord dihentikan"
-  },
-  {
-    "timestamp": "2026-08-23T16:11:58.329788+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T16:11:58.320162+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T15:56:27.099455+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T15:56:27.088029+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T15:40:36.723868+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T15:40:36.715442+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T15:23:15.524924+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T15:23:15.515719+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T15:11:46.555325+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T15:11:46.545427+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T14:50:40.004261+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T14:50:39.995052+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T14:37:35.506992+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T14:37:35.487061+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T14:24:13.181053+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T14:24:13.155279+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T14:06:58.340378+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T14:06:58.308533+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T13:51:29.095913+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T13:51:29.073681+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T13:35:37.260411+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T13:35:37.234532+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T13:18:20.012495+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T13:18:19.948420+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T13:06:48.193207+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T13:06:48.156554+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T12:45:36.122661+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T12:45:36.086416+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T12:32:35.917658+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T12:32:35.887066+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T12:19:11.498491+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T12:19:11.469115+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T12:01:58.868170+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T12:01:58.770352+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T11:46:29.140532+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T11:46:28.966156+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T11:30:37.919935+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T11:30:37.825586+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T11:13:16.586872+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T11:13:16.541811+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T11:01:48.979085+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T11:01:48.915645+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T10:40:35.989972+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T10:40:35.960340+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T10:27:34.687611+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T10:27:34.676249+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T10:14:10.572064+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T10:14:10.559634+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T09:56:58.823098+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T09:56:58.784315+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T09:41:27.849471+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T09:41:27.770905+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T09:25:37.384467+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T09:25:37.312908+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T09:08:16.552785+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T09:08:16.536548+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T08:56:46.422508+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T08:56:46.397479+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T08:35:35.950960+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T08:35:35.871476+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T08:22:36.172973+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T08:22:36.109048+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T08:09:10.893873+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T08:09:10.851972+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T07:51:59.203489+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T07:51:59.143800+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T07:36:28.470626+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T07:36:28.388596+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T07:20:37.894576+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T07:20:37.814106+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T07:03:16.176060+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T07:03:16.096922+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T06:51:46.813643+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T06:51:46.800160+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T06:30:36.083217+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T06:30:36.019114+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T06:17:43.228234+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T06:17:43.191767+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T06:04:11.213367+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T06:04:11.145903+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T05:46:58.889187+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T05:46:58.814446+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T05:31:27.689612+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T05:31:27.663283+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T05:15:37.176235+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T05:15:37.161015+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T04:58:16.928996+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T04:58:16.897482+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T04:46:47.276407+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T04:46:47.227805+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T04:25:35.678970+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T04:25:35.621854+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T04:12:36.110906+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T04:12:36.088880+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T03:59:11.166370+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T03:59:11.148962+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T03:41:59.297054+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T03:41:59.209675+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T03:26:28.436641+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T03:26:28.352122+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T03:10:39.491556+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T03:10:39.383011+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T02:53:16.836402+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'platform' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T02:53:16.808453+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846673193426354176"
-  },
-  {
-    "timestamp": "2026-08-23T02:41:46.089417+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T02:41:46.081823+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T02:20:36.519693+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'sign' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T02:20:36.508535+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846661246303469598"
-  },
-  {
-    "timestamp": "2026-08-23T02:07:35.007848+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T02:07:34.995823+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T01:54:10.371623+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'doors' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T01:54:10.363413+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 846671811223355402"
-  },
-  {
-    "timestamp": "2026-08-23T01:36:58.584305+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T01:36:58.569614+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T01:21:27.638510+07:00",
-    "action": "automation_sent",
-    "level": "info",
-    "detail": "Automation 'background' terkirim via Akun 1"
-  },
-  {
-    "timestamp": "2026-08-23T01:21:27.625314+07:00",
-    "action": "message_sent",
-    "level": "info",
-    "detail": "Pesan terkirim ke channel 782718523629633567"
-  },
-  {
-    "timestamp": "2026-08-23T01:05:10.831429+07:00",
+    "timestamp": "2026-10-03T12:00:28.489254+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'platform' dibuat via Akun 1"
   },
   {
-    "timestamp": "2026-08-23T00:47:49.544341+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation 'platform' dibuat via Akun 2"
-  },
-  {
-    "timestamp": "2026-08-23T00:36:02.299449+07:00",
+    "timestamp": "2026-10-03T11:46:31.512567+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'sign' dibuat via Akun 2"
   },
   {
-    "timestamp": "2026-08-23T00:15:00.333491+07:00",
+    "timestamp": "2026-10-03T11:29:48.832905+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'sign' dibuat via Akun 1"
   },
   {
-    "timestamp": "2026-08-23T00:01:56.787863+07:00",
+    "timestamp": "2026-10-03T11:16:42.656765+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'doors' dibuat via Akun 2"
   },
   {
-    "timestamp": "2026-08-22T23:48:41.614239+07:00",
+    "timestamp": "2026-10-03T11:00:57.655242+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'doors' dibuat via Akun 1"
   },
   {
-    "timestamp": "2026-08-22T23:31:29.519022+07:00",
+    "timestamp": "2026-10-03T10:47:11.223766+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'background' dibuat via Akun 2"
   },
   {
-    "timestamp": "2026-08-22T23:16:01.245378+07:00",
+    "timestamp": "2026-10-03T10:46:42.960078+07:00",
+    "action": "account_login",
+    "level": "info",
+    "detail": "Login sebagai notyourpouls"
+  },
+  {
+    "timestamp": "2026-10-03T10:46:41.615122+07:00",
+    "action": "account_start_error",
+    "level": "error",
+    "detail": "Gagal menjalankan akun 'Akun 2': Akun Discord gagal login"
+  },
+  {
+    "timestamp": "2026-10-03T10:34:12.176185+07:00",
     "action": "automation_created",
     "level": "info",
     "detail": "Automation 'background' dibuat via Akun 1"
   },
   {
-    "timestamp": "2026-08-22T23:08:14.340252+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-22T23:08:08.547238+07:00",
-    "action": "account_start",
-    "level": "info",
-    "detail": "Akun 'Akun 2' dijalankan"
-  },
-  {
-    "timestamp": "2026-08-22T23:08:08.479678+07:00",
-    "action": "account_login",
-    "level": "info",
-    "detail": "Login sebagai paulwasheree"
-  },
-  {
-    "timestamp": "2026-08-22T23:07:50.176305+07:00",
+    "timestamp": "2026-10-03T10:30:51.883151+07:00",
     "action": "account_start",
     "level": "info",
     "detail": "Akun 'Akun 1' dijalankan"
   },
   {
-    "timestamp": "2026-08-22T23:07:41.335407+07:00",
+    "timestamp": "2026-10-03T10:30:37.732212+07:00",
     "action": "account_login",
     "level": "info",
-    "detail": "Login sebagai exfu7151"
+    "detail": "Login sebagai hzufig"
   },
   {
-    "timestamp": "2026-08-22T23:07:41.247450+07:00",
+    "timestamp": "2026-10-03T10:30:29.378227+07:00",
     "action": "account_start_error",
     "level": "error",
     "detail": "Gagal menjalankan akun 'Akun 1': Akun Discord gagal login"
   },
   {
-    "timestamp": "2026-08-22T23:07:34.010366+07:00",
-    "action": "activity_cleared",
+    "timestamp": "2026-10-03T10:30:21.439856+07:00",
+    "action": "server_start",
     "level": "info",
-    "detail": "Activity log dibersihkan"
+    "detail": "Server dimulai"
+  },
+  {
+    "timestamp": "2026-10-03T10:29:50.341669+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-03T10:29:50.292668+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-03T10:28:58.470968+07:00",
+    "action": "server_start",
+    "level": "info",
+    "detail": "Server dimulai"
+  },
+  {
+    "timestamp": "2026-10-03T00:53:35.012027+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-03T00:53:29.967873+07:00",
+    "action": "account_stop",
+    "level": "info",
+    "detail": "Akun Discord dihentikan"
+  },
+  {
+    "timestamp": "2026-10-03T00:47:12.923476+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T00:47:12.835245+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-03T00:31:42.383112+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T00:31:42.330648+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T00:16:57.235632+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-03T00:16:57.181321+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-03T00:16:14.626448+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T00:16:14.581533+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-03T00:01:29.733707+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-03T00:01:29.711468+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-02T23:46:51.327073+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T23:46:51.209100+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-02T23:25:59.560637+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T23:25:59.528600+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-02T23:24:38.372748+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T23:24:38.320849+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T23:15:25.693100+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T23:15:25.657993+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T22:57:31.164171+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T22:57:31.125752+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T22:42:12.484480+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T22:42:12.452935+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T22:26:41.285109+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T22:26:41.253716+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-02T22:11:57.704888+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T22:11:57.534226+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-02T22:11:13.704455+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T22:11:13.676542+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-02T21:56:29.818981+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T21:56:29.789346+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-02T21:42:00.164554+07:00",
+    "action": "automation_error",
+    "level": "error",
+    "detail": "Automation 'background' gagal: Gagal kirim pesan: HTTPSConnectionPool(host='discord.com', port=443): Max retries exceeded with url: /api/v10/channels/782718523629633567/messages (Caused by NameResolutionError(\"HTTPSConnection(host='discord.com', port=443): Failed to resolve 'discord.com' ([Errno 11001] getaddrinfo failed)\"))"
+  },
+  {
+    "timestamp": "2026-10-02T21:20:59.532303+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T21:20:59.498978+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-02T21:19:37.667439+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T21:19:37.631847+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T21:10:26.410205+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T21:10:26.369628+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T20:52:32.035728+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T20:52:32.002302+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T20:37:12.619549+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T20:37:12.580307+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T20:21:43.046292+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T20:21:43.024638+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-02T20:06:57.668378+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'doors' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T20:06:57.591454+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846671811223355402"
+  },
+  {
+    "timestamp": "2026-10-02T20:06:14.680898+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T20:06:14.652151+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-02T19:51:30.186662+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T19:51:30.149291+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-02T19:36:50.835238+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'background' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T19:36:50.804631+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782718523629633567"
+  },
+  {
+    "timestamp": "2026-10-02T19:15:59.423538+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'vending' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T19:15:59.377464+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 782722952256159754"
+  },
+  {
+    "timestamp": "2026-10-02T19:14:38.339775+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T19:14:38.303966+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T19:05:27.243885+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'platform' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T19:05:27.204543+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846673193426354176"
+  },
+  {
+    "timestamp": "2026-10-02T18:47:33.364099+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T18:47:33.352093+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T18:32:13.302901+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T18:32:13.270892+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
   }
 ]
