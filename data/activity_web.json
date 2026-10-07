@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-10-07T23:15:50.170042+07:00",
-    "action": "automation_deleted",
-    "level": "info",
-    "detail": "Automation '__tmp_edit__' dihapus"
-  },
-  {
-    "timestamp": "2026-10-07T23:15:50.108468+07:00",
-    "action": "automation_updated",
-    "level": "info",
-    "detail": "Pesan automation '__tmp_edit__' diperbarui via Akun 1 (jadwal tidak berubah)"
-  },
-  {
-    "timestamp": "2026-10-07T23:15:50.062298+07:00",
-    "action": "automation_created",
-    "level": "info",
-    "detail": "Automation '__tmp_edit__' dibuat via Akun 1"
-  },
-  {
     "timestamp": "2026-10-04T01:18:52.619254+07:00",
     "action": "account_stop",
     "level": "info",
@@ -1198,5 +1180,23 @@
     "action": "automation_sent",
     "level": "info",
     "detail": "Automation 'sign' terkirim via Akun 2"
+  },
+  {
+    "timestamp": "2026-10-02T18:47:33.352093+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
+  },
+  {
+    "timestamp": "2026-10-02T18:32:13.302901+07:00",
+    "action": "automation_sent",
+    "level": "info",
+    "detail": "Automation 'sign' terkirim via Akun 1"
+  },
+  {
+    "timestamp": "2026-10-02T18:32:13.270892+07:00",
+    "action": "message_sent",
+    "level": "info",
+    "detail": "Pesan terkirim ke channel 846661246303469598"
   }
 ]
