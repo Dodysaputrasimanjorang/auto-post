@@ -25,3 +25,7 @@ logs/
 Thumbs.db
 .vscode/
 .idea/
+
+# === Script deploy temporer (berisi langkah rahasia) ===
+_vps_step*.sh
+
