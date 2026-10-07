@@ -185,6 +185,65 @@ def create_app(
             flash("Automation tidak ditemukan.", "error")
         return redirect(url_for("dashboard"))
 
+    # ------------------------------------------------------------------
+    # Edit automation — HANYA field `message` yang boleh diubah.
+    # JADWAL TIDAK DISENTUH: tidak ada pemanggilan scheduler.schedule()
+    # di sini, dan field next_run_at/last_sent_at/created_at tidak diubah.
+    # ------------------------------------------------------------------
+    @app.get("/automations/<automation_id>/edit")
+    def edit_automation_form(automation_id: str) -> str:
+        automation = store.get_automation(automation_id)
+        if not automation:
+            flash("Automation tidak ditemukan.", "error")
+            return redirect(url_for("dashboard"))
+
+        account = bot_manager.get(automation.account_id)
+        account_name = account.account_name if account else automation.account_id
+
+        channel_name = automation.channel_id
+        if account:
+            for guild in account.guilds_snapshot():
+                if guild.id != automation.guild_id:
+                    continue
+                for channel in guild.channels:
+                    if channel.id == automation.channel_id:
+                        channel_name = channel.name
+
+        return render_template(
+            "edit_automation.html",
+            automation=automation,
+            account_name=account_name,
+            channel_name=channel_name,
+        )
+
+    @app.post("/automations/<automation_id>/edit")
+    def edit_automation(automation_id: str) -> str:
+        automation = store.get_automation(automation_id)
+        if not automation:
+            flash("Automation tidak ditemukan.", "error")
+            return redirect(url_for("dashboard"))
+
+        message = (request.form.get("message") or "").strip()
+        if not message:
+            flash("Pesan tidak boleh kosong.", "error")
+            return redirect(url_for("edit_automation_form", automation_id=automation_id))
+
+        # HANYA `message` yang ditukar. id, created_at, last_sent_at,
+        # next_run_at, name, account, channel, interval_minutes dan enabled
+        # dipertahankan apa adanya -> jadwal posting TETAP SAMA.
+        automation.message = message
+        store.upsert_automation(automation)
+
+        account = bot_manager.get(automation.account_id)
+        account_label = account.account_name if account else automation.account_id
+        _activity_log(
+            "automation_updated",
+            "info",
+            f"Pesan automation '{automation.name}' diperbarui via {account_label} (jadwal tidak berubah)",
+        )
+        flash("Pesan automation diperbarui. Jadwal tidak berubah.", "success")
+        return redirect(url_for("dashboard"))
+
     @app.get("/api/guilds")
     def api_guilds():
         account_id = request.args.get("account", "").strip()

@@ -300,7 +300,11 @@ systemctl restart auto-post-telegram   # perubahan .env butuh restart
 Set-Location "c:\Users\USER\Documents\test auto post"
 .\.venv\Scripts\python.exe _smoke_test.py
 ```
-Harus: **`HASIL: 39 lulus, 0 gagal`**
+Harus: **`HASIL: 57 lulus, 0 gagal`**
+
+> Tes nomor 5 memverifikasi **fitur Edit automation**: pesan boleh berubah,
+> tetapi `id` / `next_run_at` / `last_sent_at` / `created_at` / `interval`
+> **wajib identik** dan **scheduler tidak boleh dipanggil**.
 
 ---
 

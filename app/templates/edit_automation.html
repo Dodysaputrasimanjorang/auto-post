@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="panel">
+  <div class="token-header">
+    <div>
+      <h2>Edit Automation</h2>
+      <p class="muted">
+        Hanya <strong>pesan</strong> yang dapat diubah.
+        Nama, channel, akun, interval, dan <strong>jadwal posting tidak berubah</strong>.
+      </p>
+    </div>
+  </div>
+
+  <form method="post" action="/automations/{{ automation.id }}/edit" class="form-grid">
+    <label>
+      Nama
+      <input type="text" value="{{ automation.name }}" disabled />
+    </label>
+    <label>
+      Account
+      <input type="text" value="{{ account_name }}" disabled />
+    </label>
+    <label>
+      Server
+      <input type="text" value="{{ automation.guild_id }}" disabled />
+    </label>
+    <label>
+      Channel
+      <input type="text" value="#{{ channel_name }}" disabled />
+    </label>
+    <label>
+      Interval
+      <input type="text" value="{{ automation.interval_minutes }} menit" disabled />
+    </label>
+    <label>
+      Status
+      <input type="text" value="{{ 'Aktif' if automation.enabled else 'Nonaktif' }}" disabled />
+    </label>
+    <label>
+      Terakhir terkirim
+      <input type="text" value="{{ automation.last_sent_at or '-' }}" disabled />
+    </label>
+    <label>
+      Kirim berikutnya
+      <input type="text" value="{{ automation.next_run_at or '-' }}" disabled />
+    </label>
+
+    <label class="full">
+      Pesan (bisa diubah)
+      <textarea name="message" rows="12" required spellcheck="true">{{ automation.message }}</textarea>
+    </label>
+
+    <div class="full">
+      <button type="submit">Simpan perubahan</button>
+      <a href="{{ url_for('dashboard') }}">Batal</a>
+    </div>
+  </form>
+</section>
+{% endblock %}

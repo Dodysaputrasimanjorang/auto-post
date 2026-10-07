@@ -135,5 +135,95 @@ tb.handle_update({"message": {"chat": {"id": int(OWNER)}, "from": {"id": int(OWN
                               "text": "/status"}})
 check("pemilik DIIZINKAN (membalas)", len(outbox) == 1, str(len(outbox)))
 
+# --- 5. Fitur EDIT automation (Opsi A: hanya `message`) ---
+print("\n=== 5. FITUR EDIT AUTOMATION ===")
+
+
+def snap(aid: str):
+    for a in client.get("/api/automations").get_json():
+        if a["id"] == aid:
+            return a
+    return None
+
+
+count_before_all = len(client.get("/api/automations").get_json())
+
+# Buat automation TEMPORER agar data asli tidak tersentuh sama sekali
+client.post(
+    "/automations",
+    data={
+        "name": "__tmp_edit__",
+        "channel_target": "account1|999000111|888000777",
+        "message": "pesan awal - harga 10 WL",
+        "interval_minutes": "125",
+    },
+    follow_redirects=True,
+)
+tmp = next((a for a in client.get("/api/automations").get_json()
+            if a["name"] == "__tmp_edit__"), None)
+check("automation temporer dibuat", tmp is not None)
+if tmp is None:
+    print("gagal membuat data uji, berhenti")
+    sys.exit(1)
+
+aid = tmp["id"]
+count_after_create = len(client.get("/api/automations").get_json())
+check("jumlah automation bertambah 1", count_after_create == count_before_all + 1,
+      f"{count_before_all} -> {count_after_create}")
+
+before = snap(aid)
+
+# Spion: pastikan scheduler TIDAK dipanggil saat edit (jadwal tak disentuh)
+spy: list = []
+_orig_schedule = scheduler.schedule
+scheduler.schedule = lambda a=None, *args, **kwargs: spy.append(getattr(a, "id", a))
+
+# (a) form edit
+r = client.get(f"/automations/{aid}/edit")
+html = r.get_data(as_text=True)
+check("GET form edit -> 200", r.status_code == 200, str(r.status_code))
+check("form menampilkan pesan lama", "pesan awal - harga 10 WL" in html)
+check("form menampilkan jadwal lama", str(before["next_run_at"]) in html)
+
+# (b) simpan pesan baru (ganti harga)
+new_msg = "HARGA BARU: 25 WL - EDIT TES"
+r = client.post(f"/automations/{aid}/edit", data={"message": new_msg},
+                follow_redirects=True)
+check("POST edit -> 200", r.status_code == 200, str(r.status_code))
+
+after = snap(aid)
+check("pesan BERUBAH", after["message_preview"].startswith("HARGA BARU: 25 WL"),
+      after["message_preview"][:30])
+check("id TETAP", after["id"] == aid)
+check("next_run_at TIDAK berubah", after["next_run_at"] == before["next_run_at"],
+      f"{before['next_run_at']} -> {after['next_run_at']}")
+check("last_sent_at TIDAK berubah", after["last_sent_at"] == before["last_sent_at"])
+check("created_at TIDAK berubah", after["created_at"] == before["created_at"])
+check("interval TIDAK berubah", after["interval_minutes"] == before["interval_minutes"])
+check("nama/akun/channel/status TIDAK berubah",
+      all(after[k] == before[k] for k in
+          ("name", "account_id", "guild_id", "channel_id", "enabled")))
+check("scheduler TIDAK dipanggil saat edit", spy == [], str(spy))
+
+# (c) pesan kosong ditolak
+client.post(f"/automations/{aid}/edit", data={"message": "   "}, follow_redirects=True)
+check("pesan kosong DITOLAK", snap(aid)["message_preview"].startswith("HARGA BARU: 25 WL"))
+
+# (d) id tidak ada
+r = client.post("/automations/tidak-ada-edit/edit", data={"message": "x"})
+check("id tidak ada -> redirect 302", r.status_code == 302, str(r.status_code))
+
+# (e) tidak ada duplikasi / kehilangan
+check("jumlah automation tetap selama edit",
+      len(client.get("/api/automations").get_json()) == count_after_create)
+
+scheduler.schedule = _orig_schedule
+
+# (f) bersihkan data uji
+client.post(f"/automations/{aid}/delete", follow_redirects=True)
+count_final = len(client.get("/api/automations").get_json())
+check("cleanup: jumlah kembali seperti semula", count_final == count_before_all,
+      f"{count_before_all} -> {count_final}")
+
 print(f"\n{'='*40}\nHASIL: {PASS} lulus, {FAIL} gagal\n{'='*40}")
 sys.exit(1 if FAIL else 0)
