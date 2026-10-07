@@ -233,4 +233,72 @@ def create_app(
             return jsonify({"status": "ok"})
         return jsonify({"status": "ok"})
 
+    # ------------------------------------------------------------------
+    # Endpoint baru untuk bot Telegram (semua BACA saja, tanpa mutasi)
+    # ------------------------------------------------------------------
+    @app.get("/api/health")
+    def api_health():
+        """Ringkasan kesehatan sistem — dipakai command Telegram /status."""
+        automations = store.list_automations()
+        return jsonify(
+            {
+                "ok": True,
+                "dashboard": request.url_root.rstrip("/"),
+                "automations_total": len(automations),
+                "automations_enabled": sum(1 for a in automations if a.enabled),
+                "activity_count": len(activity_logger.list(200)) if activity_logger else 0,
+                "bot_ready": bot_manager.any_running(),
+                "accounts": [
+                    {
+                        "id": acc.account_id,
+                        "name": acc.account_name,
+                        "is_running": acc.is_running,
+                        "has_token": bool(acc.token),
+                    }
+                    for acc in bot_manager.all_accounts()
+                ],
+            }
+        )
+
+    @app.get("/api/automations")
+    def api_automations():
+        """Daftar automation — dipakai command Telegram /automations."""
+        return jsonify(
+            [
+                {
+                    "id": a.id,
+                    "name": a.name,
+                    "enabled": a.enabled,
+                    "interval_minutes": a.interval_minutes,
+                    "account_id": a.account_id,
+                    "guild_id": a.guild_id,
+                    "channel_id": a.channel_id,
+                    "message_preview": " ".join((a.message or "").split())[:80],
+                    "created_at": a.created_at,
+                    "last_sent_at": a.last_sent_at,
+                    "next_run_at": a.next_run_at,
+                }
+                for a in store.list_automations()
+            ]
+        )
+
+    @app.get("/api/sent")
+    def api_sent():
+        """Pesan yang berhasil terkirim — dipakai command Telegram /sent."""
+        if not activity_logger:
+            return jsonify([])
+        limit = max(1, min(request.args.get("limit", default=5, type=int), 50))
+        entries = activity_logger.list(200)
+
+        # Utamakan entri automation_sent (punya nama automation + akun).
+        sent = [e for e in entries if e.get("action") == "automation_sent"]
+        if len(sent) < limit:
+            used = {e.get("timestamp") for e in sent}
+            for entry in entries:
+                if len(sent) >= limit:
+                    break
+                if entry.get("action") == "message_sent" and entry.get("timestamp") not in used:
+                    sent.append(entry)
+        return jsonify(sent[:limit])
+
     return app

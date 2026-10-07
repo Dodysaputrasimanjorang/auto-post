@@ -1,0 +1,22 @@
+[Unit]
+Description=Auto Discord Poster - Telegram Monitor Bot
+Documentation=file:///opt/auto-post/DEPLOY.md
+After=network-online.target auto-discord-poster.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/auto-post
+# Bot berjalan TERPISAH dari aplikasi utama (arsitektur Opsi A):
+# - crash bot TIDAK mempengaruhi dashboard / automation
+# - bisa di-stop/restart tanpa menyentuh auto-discord-poster
+ExecStart=/opt/auto-post/.venv/bin/python /opt/auto-post/app/telegram_bot.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+# Bot hanya butuh jaringan keluar (long-polling) -> batasi memori ketat
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target
